@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="AutoMouseMover">
-    <output-path>$PROJECT_DIR$/out/artifacts/AutoMouseMover</output-path>
-    <root id="archive" name="AutoMouseMover.jar">
-      <element id="module-output" name="AutoMouseMover" />
-    </root>
-  </artifact>
-</component>
