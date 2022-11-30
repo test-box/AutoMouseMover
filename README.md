@@ -1,2 +1,2 @@
-# AutoMouseMover
-AutoMouseMover module version 0.1
+# AutoMouseMoverFX
+AutoMouseMoverFX module version 0.1
