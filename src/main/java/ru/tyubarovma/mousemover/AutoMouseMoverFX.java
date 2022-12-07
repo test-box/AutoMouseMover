@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
@@ -38,6 +39,8 @@ public class AutoMouseMoverFX extends Application {
         stage.setTitle("AutoMouseMoverFX");
         stage.setScene(scene);
         stage.setResizable(false);
+        Image icon = new Image(getClass().getResourceAsStream("/icons/mousemover.png"));
+        stage.getIcons().add(icon);
         stage.show();
     }
 
@@ -67,7 +70,7 @@ public class AutoMouseMoverFX extends Application {
         gridPane.add(timeoutLabel, 2, 0);
 
         Spinner<Integer> spinner = new Spinner<>(1, 60, 2);
-        spinner.setEditable(true);
+        spinner.setEditable(false);
         spinner.setPrefWidth(60);
         gridPane.add(spinner, 3, 0);
         this.spinner = spinner;
@@ -89,13 +92,13 @@ public class AutoMouseMoverFX extends Application {
         mouseMoverTaskOptional = Optional.of(scheduler.scheduleAtFixedRate(
                 mouseMover.task(), 0, this.spinner.getValue(), TimeUnit.SECONDS
                 ));
-        System.out.println("futureOptional = " + mouseMoverTaskOptional + " - НОВАЯ ЗАДАЧА");
+//        System.out.println("futureOptional = " + mouseMoverTaskOptional + " - НОВАЯ ЗАДАЧА");
     }
 
     public void stopMouseMover() {
         mouseMoverTaskOptional.filter(t -> !t.isCancelled())
                 .ifPresent(t -> t.cancel(true));
-        System.out.println("futureOptional = " + mouseMoverTaskOptional + " - ОТМЕНИЛИ СТАРУЮ ЗАДАЧУ");
+//        System.out.println("futureOptional = " + mouseMoverTaskOptional + " - ОТМЕНИЛИ СТАРУЮ ЗАДАЧУ");
     }
 
     private void restartMouseMover() {

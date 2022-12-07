@@ -18,9 +18,9 @@ class MouseMover {
     }
 
     public void moveMouse() {
-        System.out.print(toggle + "  ");
+//        System.out.print(toggle + "  ");
         if (getToggle()) {
-            System.err.println("Двигаем мышь туда");
+//            System.err.println("Двигаем мышь туда");
             Platform.runLater(new Runnable() {
                 @Override
                 public void run() {
@@ -28,7 +28,7 @@ class MouseMover {
                 }
             });
         } else {
-            System.err.println("Двигаем мышь сюда");
+//            System.err.println("Двигаем мышь сюда");
             Platform.runLater(new Runnable() {
                 @Override
                 public void run() {
