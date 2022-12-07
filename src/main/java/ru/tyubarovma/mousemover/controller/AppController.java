@@ -8,6 +8,7 @@ import javafx.scene.input.MouseEvent;
 
 import ru.tyubarovma.mousemover.AutoMouseMoverFX;
 
+//TODO  -Add controller for AlwaysOnTop Button
 public class AppController {
     private final AutoMouseMoverFX application;
 

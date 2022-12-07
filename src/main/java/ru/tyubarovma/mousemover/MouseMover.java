@@ -35,9 +35,9 @@ class MouseMover {
                     robot.mouseMove(robot.getMouseX() - 1, robot.getMouseY() - 1);
                 }
             });
-            ticks++;
             counterOpt.ifPresent(c -> c.setText(Integer.toString(ticks)));
         }
+        ticks++;
     }
 
     public Runnable task() {

@@ -16,7 +16,7 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 
-
+//TODO -Add AlwaysOnTop Button
 public class AutoMouseMoverFX extends Application {
     private AppController appController;
     private Stage stage;
