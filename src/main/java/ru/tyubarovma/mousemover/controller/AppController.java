@@ -3,6 +3,7 @@ package ru.tyubarovma.mousemover.controller;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.input.InputMethodEvent;
 import javafx.scene.input.MouseEvent;
 
@@ -29,6 +30,11 @@ public class AppController {
             button.setText("Stop");
         }
         this.application.sizeToScene();
+    }
+
+    public void onActionToggleButton(ActionEvent actionEvent) {
+        ToggleButton button = (ToggleButton) actionEvent.getSource();
+        this.application.setAllwaysOnTop(button.isSelected());
     }
 
     public void onActionInputSlider(InputMethodEvent inputMethodEvent) {
